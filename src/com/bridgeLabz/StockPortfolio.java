@@ -1,5 +1,7 @@
 package com.bridgeLabz;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class StockPortfolio {
 
     private int numOfStockNames = 0;
@@ -27,10 +29,17 @@ public class StockPortfolio {
     public static void main(String[] args) {
         StockPortfolio stockObj = new StockPortfolio();
         Stock stock = new Stock();
+
         stock.setStockName("TCS");
         stockObj.addStockData(stock.getStockName(), 20,100);
 
-    stockObj.computeSharePriceData();
+        stock.setStockName("BridgeLabz");
+        stockObj.addStockData(stock.getStockName(), 10,100);
+
+        stock.setStockName("Amazon");
+        stockObj.addStockData(stock.getStockName(), 20,200);
+
+         stockObj.computeSharePriceData();
     }
 
 }
