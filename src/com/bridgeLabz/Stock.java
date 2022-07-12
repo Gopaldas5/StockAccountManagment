@@ -2,17 +2,17 @@ package com.bridgeLabz;
 
 public class Stock {
     public String stockName;
-    public int stockNumber;
-    public double stockPrice;
+    public int shareNumber;
+    public double sharePrice;
     int totalSharePrice = 0;
 
     public Stock() {
     }
 
-    public Stock(String stockName, int stockNumber, double stockPrice) {
+    public Stock(String stockName, int shareNumber, double sharePrice) {
         this.stockName = stockName;
-        this.stockNumber = stockNumber;
-        this.stockPrice = stockPrice;
+        this.shareNumber = shareNumber;
+        this.sharePrice = sharePrice;
     }
     public void calculateSharePrice(int totalSharePrice){
         this.totalSharePrice = totalSharePrice;
@@ -27,28 +27,28 @@ public class Stock {
         this.stockName = stockName;
     }
 
-    public int getStockNumber() {
-        return stockNumber;
+    public int getShareNumber() {
+        return shareNumber;
     }
 
-    public void setStockNumber(int stockNumber) {
-        this.stockNumber = stockNumber;
+    public void setShareNumber(int shareNumber) {
+        this.shareNumber = shareNumber;
     }
 
-    public double getStockPrice() {
-        return stockPrice;
+    public double getSharePrice() {
+        return sharePrice;
     }
 
-    public void setStockPrice(double stockPrice) {
-        this.stockPrice = stockPrice;
+    public void setSharePrice(double sharePrice) {
+        this.sharePrice = sharePrice;
     }
 
     @Override
     public String toString() {
-        return "Stock{" +
-                "stockName='" + stockName + '\'' +
-                ", stockNumber=" + stockNumber +
-                ", stockPrice=" + stockPrice +
-                '}';
+        return "Stock :-{ " +
+                "stockName = '" + stockName + '\'' +
+                ", shareNumber = " + shareNumber +
+                " , sharePrice = " + sharePrice +
+                '}'+ " \n Total share price :- "+totalSharePrice;
     }
 }
